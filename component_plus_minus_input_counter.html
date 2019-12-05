@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Minus/Plus Increment</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+
+	input {
+		margin: 4px;
+		text-align: center;
+		width: 30px;
+	}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+
+	<div class="well well-sm"><h3>Actualizacion de Multiples Campos Textos (Numericos) con valores Enteros <br>Usando Minus (Para Descontar) Y Plus (Para Incrementar)</h3></div>
+
+	<!-- Rx Bx -->
+    <div class="panel panel-danger">
+		<div class="panel-heading">
+			EJEMPLO A
+		</div>
+		<div class="panel-body">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed">
+					<thead style="color: #333; background-color: #f5f5f5; border-color: #ddd;">
+						</tr>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 01</th>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 02</th>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 03</th>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 04</th>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 05</th>
+						</tr>
+						<tr>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<!-- 01 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_01_i">-</button>
+									<input type="text" name="rx_bx_01_i" id="rx_bx_01_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_01_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_01_p">-</button>
+									<input type="text" name="rx_bx_01_p" id="rx_bx_01_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_01_p">+</button>
+								</div>
+							</td>
+							<!-- 02 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_02_i">-</button>
+									<input type="text" name="rx_bx_02_i" id="rx_bx_02_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_02_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_02_p">-</button>
+									<input type="text" name="rx_bx_02_p" id="rx_bx_02_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_02_p">+</button>
+								</div>
+							</td>
+							<!-- 03 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_03_i">-</button>
+									<input type="text" name="rx_bx_03_i" id="rx_bx_03_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_03_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_03_p">-</button>
+									<input type="text" name="rx_bx_03_p" id="rx_bx_03_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_03_p">+</button>
+								</div>
+							</td>
+							<!-- 04 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_04_i">-</button>
+									<input type="text" name="rx_bx_04_i" id="rx_bx_04_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_04_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_04_p">-</button>
+									<input type="text" name="rx_bx_04_p" id="rx_bx_04_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_04_p">+</button>
+								</div>
+							</td>
+							<!-- 05 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_05_i">-</button>
+									<input type="text" name="rx_bx_05_i" id="rx_bx_05_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_05_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_05_p">-</button>
+									<input type="text" name="rx_bx_05_p" id="rx_bx_05_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_05_p">+</button>
+								</div>
+							</td>
+					</tbody>
+				</table>				
+				<table class="table table-bordered table-condensed">
+					<thead style="color: #333; background-color: #f5f5f5; border-color: #ddd;">
+						</tr>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 06</th>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 07</th>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 08</th>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 09</th>
+							<th width="20%" colspan="2" style="text-align:center">Rx Bx 10</th>
+						</tr>
+						<tr>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+							<th style="text-align:center">I</th>
+							<th style="text-align:center">P</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<!-- 06 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_06_i">-</button>
+									<input type="text" name="rx_bx_06_i" id="rx_bx_06_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_06_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_06_p">-</button>
+									<input type="text" name="rx_bx_06_p" id="rx_bx_06_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_06_p">+</button>
+								</div>
+							</td>
+							<!-- 07 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_07_i">-</button>
+									<input type="text" name="rx_bx_07_i" id="rx_bx_07_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_07_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_07_p">-</button>
+									<input type="text" name="rx_bx_07_p" id="rx_bx_07_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_07_p">+</button>
+								</div>
+							</td>
+							<!-- 08 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_08_i">-</button>
+									<input type="text" name="rx_bx_08_i" id="rx_bx_08_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_08_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_08_p">-</button>
+									<input type="text" name="rx_bx_08_p" id="rx_bx_08_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_08_p">+</button>
+								</div>
+							</td>
+							<!-- 09 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_09_i">-</button>
+									<input type="text" name="rx_bx_09_i" id="rx_bx_09_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_09_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_09_p">-</button>
+									<input type="text" name="rx_bx_09_p" id="rx_bx_09_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_09_p">+</button>
+								</div>
+							</td>
+							<!-- 10 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_10_i">-</button>
+									<input type="text" name="rx_bx_10_i" id="rx_bx_10_i" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_10_i">+</button>
+								</div>
+							</td>
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_rx_bx_10_p">-</button>
+									<input type="text" name="rx_bx_10_p" id="rx_bx_10_p" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_rx_bx_10_p">+</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+		
+	<!-- Tx Bx -->
+
+    <div class="panel panel-success">
+		<div class="panel-heading">
+			EJEMPLO B
+		</div>
+		<div class="panel-body">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed">	
+					<thead style="color: #333; background-color: #f5f5f5; border-color: #ddd;">
+						</tr>
+							<th width="20%" style="text-align:center">Tx Bx 01</th>
+							<th width="20%" style="text-align:center">Tx Bx 02</th>
+							<th width="20%" style="text-align:center">Tx Bx 03</th>
+							<th width="20%" style="text-align:center">Tx Bx 04</th>
+							<th width="20%" style="text-align:center">Tx Bx 05</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<!-- 01 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_01">-</button>
+									<input type="text" name="tx_bx_01" id="tx_bx_01" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_01">+</button>
+								</div>
+							</td>
+							<!-- 02 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_02">-</button>
+									<input type="text" name="tx_bx_02" id="tx_bx_02" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_02">+</button>
+								</div>
+							</td>
+							<!-- 03 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_03">-</button>
+									<input type="text" name="tx_bx_03" id="tx_bx_03" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_03">+</button>
+								</div>
+							</td>
+							<!-- 04 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_04">-</button>
+									<input type="text" name="tx_bx_04" id="tx_bx_04" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_04">+</button>
+								</div>
+							</td>
+							<!-- 05 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_05">-</button>
+									<input type="text" name="tx_bx_05" id="tx_bx_05" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_05">+</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>				
+				<table class="table table-bordered table-condensed">	
+					<thead style="color: #333; background-color: #f5f5f5; border-color: #ddd;">
+						</tr>
+							<th width="20%" style="text-align:center">Tx Bx 06</th>
+							<th width="20%" style="text-align:center">Tx Bx 07</th>
+							<th width="20%" style="text-align:center">Tx Bx 08</th>
+							<th width="20%" style="text-align:center">Tx Bx 09</th>
+							<th width="20%" style="text-align:center">Tx Bx 10</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<!-- 06 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_06">-</button>
+									<input type="text" name="tx_bx_06" id="tx_bx_06" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_06">+</button>
+								</div>
+							</td>
+							<!-- 07 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_07">-</button>
+									<input type="text" name="tx_bx_07" id="tx_bx_07" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_07">+</button>
+								</div>
+							</td>
+							<!-- 08 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_08">-</button>
+									<input type="text" name="tx_bx_08" id="tx_bx_08" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_08">+</button>
+								</div>
+							</td>
+							<!-- 09 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_09">-</button>
+									<input type="text" name="tx_bx_09" id="tx_bx_09" value="0" style="background-color:#eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_09">+</button>
+								</div>
+							</td>
+							<!-- 10 -->
+							<td align="center">
+								<div style="padding:0px;">
+									<button type="button" class="btn btn-default btn-xs" id="minus_tx_bx_10">-</button>
+									<input type="text" name="tx_bx_10" id="tx_bx_10" value="0" style="background-color: #eee;" readonly>
+									<button type="button" class="btn btn-default btn-xs" id="plus_tx_bx_10">+</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>		
+		
+		
+<script>
+
+	/*
+	document.getElementById("rx_bx_01_i").value = "<?php echo (isset($row['rx_bx_01_i'])) ? $row['rx_bx_01_i'] : '0'; ?>";
+	document.getElementById("rx_bx_01_p").value = "<?php echo (isset($row['rx_bx_01_p'])) ? $row['rx_bx_01_p'] : '0'; ?>";
+	document.getElementById("rx_bx_02_i").value = "<?php echo (isset($row['rx_bx_02_i'])) ? $row['rx_bx_02_i'] : '0'; ?>";
+	document.getElementById("rx_bx_02_p").value = "<?php echo (isset($row['rx_bx_02_p'])) ? $row['rx_bx_02_p'] : '0'; ?>";
+	document.getElementById("rx_bx_03_i").value = "<?php echo (isset($row['rx_bx_03_i'])) ? $row['rx_bx_03_i'] : '0'; ?>";
+	document.getElementById("rx_bx_03_p").value = "<?php echo (isset($row['rx_bx_03_p'])) ? $row['rx_bx_03_p'] : '0'; ?>";
+	document.getElementById("rx_bx_04_i").value = "<?php echo (isset($row['rx_bx_04_i'])) ? $row['rx_bx_04_i'] : '0'; ?>";
+	document.getElementById("rx_bx_04_p").value = "<?php echo (isset($row['rx_bx_04_p'])) ? $row['rx_bx_04_p'] : '0'; ?>";
+	document.getElementById("rx_bx_05_i").value = "<?php echo (isset($row['rx_bx_05_i'])) ? $row['rx_bx_05_i'] : '0'; ?>";
+	document.getElementById("rx_bx_05_p").value = "<?php echo (isset($row['rx_bx_05_p'])) ? $row['rx_bx_05_p'] : '0'; ?>";
+	document.getElementById("rx_bx_06_i").value = "<?php echo (isset($row['rx_bx_06_i'])) ? $row['rx_bx_06_i'] : '0'; ?>";
+	document.getElementById("rx_bx_06_p").value = "<?php echo (isset($row['rx_bx_06_p'])) ? $row['rx_bx_06_p'] : '0'; ?>";
+	document.getElementById("rx_bx_07_i").value = "<?php echo (isset($row['rx_bx_07_i'])) ? $row['rx_bx_07_i'] : '0'; ?>";
+	document.getElementById("rx_bx_07_p").value = "<?php echo (isset($row['rx_bx_07_p'])) ? $row['rx_bx_07_p'] : '0'; ?>";
+	document.getElementById("rx_bx_08_i").value = "<?php echo (isset($row['rx_bx_08_i'])) ? $row['rx_bx_08_i'] : '0'; ?>";
+	document.getElementById("rx_bx_08_p").value = "<?php echo (isset($row['rx_bx_08_p'])) ? $row['rx_bx_08_p'] : '0'; ?>";
+	document.getElementById("rx_bx_09_i").value = "<?php echo (isset($row['rx_bx_09_i'])) ? $row['rx_bx_09_i'] : '0'; ?>";
+	document.getElementById("rx_bx_09_p").value = "<?php echo (isset($row['rx_bx_09_p'])) ? $row['rx_bx_09_p'] : '0'; ?>";
+	document.getElementById("rx_bx_10_i").value = "<?php echo (isset($row['rx_bx_10_i'])) ? $row['rx_bx_10_i'] : '0'; ?>";
+	document.getElementById("rx_bx_10_p").value = "<?php echo (isset($row['rx_bx_10_p'])) ? $row['rx_bx_10_p'] : '0'; ?>";
+
+	document.getElementById("tx_bx_01").value = "<?php echo (isset($row['tx_bx_01'])) ? $row['tx_bx_01'] : '0'; ?>";
+	document.getElementById("tx_bx_02").value = "<?php echo (isset($row['tx_bx_02'])) ? $row['tx_bx_02'] : '0'; ?>";
+	document.getElementById("tx_bx_03").value = "<?php echo (isset($row['tx_bx_03'])) ? $row['tx_bx_03'] : '0'; ?>";
+	document.getElementById("tx_bx_04").value = "<?php echo (isset($row['tx_bx_04'])) ? $row['tx_bx_04'] : '0'; ?>";
+	document.getElementById("tx_bx_05").value = "<?php echo (isset($row['tx_bx_05'])) ? $row['tx_bx_05'] : '0'; ?>";
+	document.getElementById("tx_bx_06").value = "<?php echo (isset($row['tx_bx_06'])) ? $row['tx_bx_06'] : '0'; ?>";
+	document.getElementById("tx_bx_07").value = "<?php echo (isset($row['tx_bx_07'])) ? $row['tx_bx_07'] : '0'; ?>";
+	document.getElementById("tx_bx_08").value = "<?php echo (isset($row['tx_bx_08'])) ? $row['tx_bx_08'] : '0'; ?>";
+	document.getElementById("tx_bx_09").value = "<?php echo (isset($row['tx_bx_09'])) ? $row['tx_bx_09'] : '0'; ?>";
+	document.getElementById("tx_bx_10").value = "<?php echo (isset($row['tx_bx_10'])) ? $row['tx_bx_10'] : '0'; ?>";
+	*/
+
+	document.getElementById("plus_rx_bx_01_i").addEventListener("click", function() { 	add("rx_bx_01_i"); });
+	document.getElementById("minus_rx_bx_01_i").addEventListener("click", function() {	sub("rx_bx_01_i"); });
+	document.getElementById("plus_rx_bx_01_p").addEventListener("click", function() { 	add("rx_bx_01_p"); });
+	document.getElementById("minus_rx_bx_01_p").addEventListener("click", function() {	sub("rx_bx_01_p"); });
+
+	document.getElementById("plus_rx_bx_02_i").addEventListener("click", function() { 	add("rx_bx_02_i"); });
+	document.getElementById("minus_rx_bx_02_i").addEventListener("click", function() {	sub("rx_bx_02_i"); });
+	document.getElementById("plus_rx_bx_02_p").addEventListener("click", function() { 	add("rx_bx_02_p"); });
+	document.getElementById("minus_rx_bx_02_p").addEventListener("click", function() {	sub("rx_bx_02_p"); });
+
+	document.getElementById("plus_rx_bx_03_i").addEventListener("click", function() { 	add("rx_bx_03_i"); });
+	document.getElementById("minus_rx_bx_03_i").addEventListener("click", function() {	sub("rx_bx_03_i"); });
+	document.getElementById("plus_rx_bx_03_p").addEventListener("click", function() { 	add("rx_bx_03_p"); });
+	document.getElementById("minus_rx_bx_03_p").addEventListener("click", function() {	sub("rx_bx_03_p"); });
+
+	document.getElementById("plus_rx_bx_04_i").addEventListener("click", function() { 	add("rx_bx_04_i"); });
+	document.getElementById("minus_rx_bx_04_i").addEventListener("click", function() {	sub("rx_bx_04_i"); });
+	document.getElementById("plus_rx_bx_04_p").addEventListener("click", function() { 	add("rx_bx_04_p"); });
+	document.getElementById("minus_rx_bx_04_p").addEventListener("click", function() {	sub("rx_bx_04_p"); });
+
+	document.getElementById("plus_rx_bx_05_i").addEventListener("click", function() { 	add("rx_bx_05_i"); });
+	document.getElementById("minus_rx_bx_05_i").addEventListener("click", function() {	sub("rx_bx_05_i"); });
+	document.getElementById("plus_rx_bx_05_p").addEventListener("click", function() { 	add("rx_bx_05_p"); });
+	document.getElementById("minus_rx_bx_05_p").addEventListener("click", function() {	sub("rx_bx_05_p"); });
+
+	document.getElementById("plus_rx_bx_06_i").addEventListener("click", function() { 	add("rx_bx_06_i"); });
+	document.getElementById("minus_rx_bx_06_i").addEventListener("click", function() {	sub("rx_bx_06_i"); });
+	document.getElementById("plus_rx_bx_06_p").addEventListener("click", function() { 	add("rx_bx_06_p"); });
+	document.getElementById("minus_rx_bx_06_p").addEventListener("click", function() {	sub("rx_bx_06_p"); });
+
+	document.getElementById("plus_rx_bx_07_i").addEventListener("click", function() { 	add("rx_bx_07_i"); });
+	document.getElementById("minus_rx_bx_07_i").addEventListener("click", function() {	sub("rx_bx_07_i"); });
+	document.getElementById("plus_rx_bx_07_p").addEventListener("click", function() { 	add("rx_bx_07_p"); });
+	document.getElementById("minus_rx_bx_07_p").addEventListener("click", function() {	sub("rx_bx_07_p"); });
+
+	document.getElementById("plus_rx_bx_08_i").addEventListener("click", function() { 	add("rx_bx_08_i"); });
+	document.getElementById("minus_rx_bx_08_i").addEventListener("click", function() {	sub("rx_bx_08_i"); });
+	document.getElementById("plus_rx_bx_08_p").addEventListener("click", function() { 	add("rx_bx_08_p"); });
+	document.getElementById("minus_rx_bx_08_p").addEventListener("click", function() {	sub("rx_bx_08_p"); });
+
+	document.getElementById("plus_rx_bx_09_i").addEventListener("click", function() { 	add("rx_bx_09_i"); });
+	document.getElementById("minus_rx_bx_09_i").addEventListener("click", function() {	sub("rx_bx_09_i"); });
+	document.getElementById("plus_rx_bx_09_p").addEventListener("click", function() { 	add("rx_bx_09_p"); });
+	document.getElementById("minus_rx_bx_09_p").addEventListener("click", function() {	sub("rx_bx_09_p"); });
+
+	document.getElementById("plus_rx_bx_10_i").addEventListener("click", function() { 	add("rx_bx_10_i"); });
+	document.getElementById("minus_rx_bx_10_i").addEventListener("click", function() {	sub("rx_bx_10_i"); });
+	document.getElementById("plus_rx_bx_10_p").addEventListener("click", function() { 	add("rx_bx_10_p"); });
+	document.getElementById("minus_rx_bx_10_p").addEventListener("click", function() {	sub("rx_bx_10_p"); });
+
+	/* tx_bx */
+
+	document.getElementById("plus_tx_bx_01").addEventListener("click", function() { 	add("tx_bx_01"); });
+	document.getElementById("minus_tx_bx_01").addEventListener("click", function() {	sub("tx_bx_01"); });
+
+	document.getElementById("plus_tx_bx_02").addEventListener("click", function() { 	add("tx_bx_02"); });
+	document.getElementById("minus_tx_bx_02").addEventListener("click", function() {	sub("tx_bx_02"); });
+
+	document.getElementById("plus_tx_bx_03").addEventListener("click", function() { 	add("tx_bx_03"); });
+	document.getElementById("minus_tx_bx_03").addEventListener("click", function() {	sub("tx_bx_03"); });
+
+	document.getElementById("plus_tx_bx_04").addEventListener("click", function() { 	add("tx_bx_04"); });
+	document.getElementById("minus_tx_bx_04").addEventListener("click", function() {	sub("tx_bx_04"); });
+
+	document.getElementById("plus_tx_bx_05").addEventListener("click", function() { 	add("tx_bx_05"); });
+	document.getElementById("minus_tx_bx_05").addEventListener("click", function() {	sub("tx_bx_05"); });
+
+	document.getElementById("plus_tx_bx_06").addEventListener("click", function() { 	add("tx_bx_06"); });
+	document.getElementById("minus_tx_bx_06").addEventListener("click", function() {	sub("tx_bx_06"); });
+
+	document.getElementById("plus_tx_bx_07").addEventListener("click", function() { 	add("tx_bx_07"); });
+	document.getElementById("minus_tx_bx_07").addEventListener("click", function() {	sub("tx_bx_07"); });
+
+	document.getElementById("plus_tx_bx_08").addEventListener("click", function() { 	add("tx_bx_08"); });
+	document.getElementById("minus_tx_bx_08").addEventListener("click", function() {	sub("tx_bx_08"); });
+
+	document.getElementById("plus_tx_bx_09").addEventListener("click", function() { 	add("tx_bx_09"); });
+	document.getElementById("minus_tx_bx_09").addEventListener("click", function() {	sub("tx_bx_09"); });
+
+	document.getElementById("plus_tx_bx_10").addEventListener("click", function() { 	add("tx_bx_10"); });
+	document.getElementById("minus_tx_bx_10").addEventListener("click", function() {	sub("tx_bx_10"); });
+
+	var max_value=100;
+	
+	/* Functions */
+	
+	function sub(id) {
+		var a = document.getElementById(id);
+		a.value = (Number(a.value) <= 0) ? 0 : Number(a.value)-1;
+	}
+	
+	function add(id) {
+		var a = document.getElementById(id);
+		a.value = (Number(a.value) >= max_value) ? max_value : Number(a.value)+1;
+	}
+	
+</script>
+</body>
+</html>
